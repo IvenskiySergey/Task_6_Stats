@@ -17,6 +17,19 @@ public class main {
         StatsService servicePeakMonth = new StatsService();
         int peakMonth = servicePeakMonth.peakMonth(sales);
         System.out.println("Номер месяца, в котором был пик продаж (осуществлены продажи на максимальную сумму) = " + peakMonth);
+
+        StatsService serviceMinMonth = new StatsService();
+        int minMonth = serviceMinMonth.minMonth(sales);
+        System.out.println("Номер месяца, в котором был минимум продаж (осуществлены продажи на минимальную сумму) = " + minMonth);
+
+        StatsService serviceLessThanMedium = new StatsService();
+        int lessThanMedium = serviceLessThanMedium.lessThanMedium(sales);
+        System.out.println("Кол-во месяцев, в которых продажи были ниже среднего = " + lessThanMedium);
+
+        StatsService serviceAboveMedium = new StatsService();
+        int aboveMedium = serviceAboveMedium.aboveMedium(sales);
+        System.out.println("Кол-во месяцев, в которых продажи были выше среднего = " + aboveMedium);
+
     }
 
 }
