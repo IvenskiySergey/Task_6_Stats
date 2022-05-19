@@ -19,6 +19,19 @@ public class StatsService {
         return medium;
     }
 
+    public int peakSales(int[] sales) {
+        int peakMonth = 0;
+        int month = 0;
+        for (int sale : sales) {
+            if (sale >= sales[peakMonth]) {
+                peakMonth = month;
+            }
+            month = month + 1;
+        }
+        return peakMonth + 1;
+    }
+
+    //Альтернативный вариант расчета
     public int peakMonth(int[] sales) {
         int max = sales[0];
         int peakMonth = 0;
@@ -31,6 +44,19 @@ public class StatsService {
         return peakMonth;
     }
 
+    public int minSales(int[] sales) {
+        int minMonth = 0;
+        int month = 0;
+        for (int sale : sales) {
+            if (sale <= sales[minMonth]) {
+                minMonth = month;
+            }
+            month = month + 1;
+        }
+        return minMonth + 1;
+    }
+
+    //Альтернативный метод расчета
     public int minMonth(int[] sales) {
         int min = sales[0];
         int minMonth = 0;
