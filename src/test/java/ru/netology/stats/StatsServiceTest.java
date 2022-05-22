@@ -42,36 +42,12 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void servicePeakMonthTest() {
-        StatsService servicePeakMonth = new StatsService();
-
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-
-        int actual = servicePeakMonth.peakMonth(sales);
-        int expected = 8;
-
-        Assertions.assertEquals(actual, expected);
-    }
-
-    @Test
     public void serviceMinSalesTest() {
         StatsService serviceMinSales = new StatsService();
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int actual = serviceMinSales.minSales(sales);
-        int expected = 9;
-
-        Assertions.assertEquals(actual, expected);
-    }
-
-    @Test
-    public void serviceMinMonthTest() {
-        StatsService serviceMinMonth = new StatsService();
-
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-
-        int actual = serviceMinMonth.minMonth(sales);
         int expected = 9;
 
         Assertions.assertEquals(actual, expected);
